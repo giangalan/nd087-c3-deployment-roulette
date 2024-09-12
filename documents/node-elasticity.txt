@@ -1,29 +1,38 @@
-PS C:\Work\DevOps\Udacity\SRE\nd087-c3-deployment-roulette> kubectl get pod                                                
-NAME                                  READY   STATUS    RESTARTS   AGE
-bloaty-mcbloatface-66dd4b7b5b-2j787   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-6d42g   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-75j6g   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-8j5m6   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-fq5f6   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-ghm78   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-gplvt   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-jv9wp   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-kd4cj   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-mz4jb   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-pvqqp   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-r9ftd   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-s7qrd   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-smdff   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-tvxc7   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-v2k5x   1/1     Running   0          2m33s
-bloaty-mcbloatface-66dd4b7b5b-vv75w   1/1     Running   0          2m33s
-blue-7fb6ff6dd9-fh75r                 1/1     Running   0          5h18m
-blue-7fb6ff6dd9-s2zpd                 1/1     Running   0          5h18m
-blue-7fb6ff6dd9-xlwhm                 1/1     Running   0          5h18m
-canary-v1-bdb7f878d-vn5mk             1/1     Running   0          5h19m
-canary-v2-755b8b7b9b-mnqtd            1/1     Running   0          136m
-canary-v2-755b8b7b9b-qjvhz            1/1     Running   0          140m
-green-679ddbb68c-2lcdw                1/1     Running   0          119m
-green-679ddbb68c-h7cgc                1/1     Running   0          119m
-green-679ddbb68c-rbs4p                1/1     Running   0          119m
-hello-world-86cc7df864-xjxnk          1/1     Running   0          3h41m
+PS C:\Work\DevOps\Udacity\SRE\nd087-c3-deployment-roulette> kubectl get pod --all-namespaces
+NAMESPACE     NAME                                  READY   STATUS    RESTARTS   AGE
+kube-system   aws-node-2gtcj                        2/2     Running   0          5h30m
+kube-system   aws-node-lbm8g                        2/2     Running   0          4m14s
+kube-system   aws-node-lwk5k                        2/2     Running   0          5h30m
+kube-system   cluster-autoscaler-699595b84f-8mgv9   1/1     Running   0          6m31s
+kube-system   coredns-6556f9967c-v9l85              1/1     Running   0          5h34m
+kube-system   coredns-6556f9967c-w7rbg              1/1     Running   0          5h34m
+kube-system   kube-proxy-6lhfn                      1/1     Running   0          4m14s
+kube-system   kube-proxy-77g97                      1/1     Running   0          5h30m
+kube-system   kube-proxy-gbjgb                      1/1     Running   0          5h30m
+udacity       bloaty-mcbloatface-66dd4b7b5b-2j787   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-6d42g   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-75j6g   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-8j5m6   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-fq5f6   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-ghm78   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-gplvt   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-jv9wp   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-kd4cj   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-mz4jb   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-pvqqp   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-r9ftd   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-s7qrd   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-smdff   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-tvxc7   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-v2k5x   1/1     Running   0          4m54s
+udacity       bloaty-mcbloatface-66dd4b7b5b-vv75w   1/1     Running   0          4m54s
+udacity       blue-7fb6ff6dd9-fh75r                 1/1     Running   0          5h21m
+udacity       blue-7fb6ff6dd9-s2zpd                 1/1     Running   0          5h21m
+udacity       blue-7fb6ff6dd9-xlwhm                 1/1     Running   0          5h21m
+udacity       canary-v1-bdb7f878d-vn5mk             1/1     Running   0          5h21m
+udacity       canary-v2-755b8b7b9b-mnqtd            1/1     Running   0          139m
+udacity       canary-v2-755b8b7b9b-qjvhz            1/1     Running   0          142m
+udacity       green-679ddbb68c-2lcdw                1/1     Running   0          121m
+udacity       green-679ddbb68c-h7cgc                1/1     Running   0          121m
+udacity       green-679ddbb68c-rbs4p                1/1     Running   0          121m
+udacity       hello-world-86cc7df864-xjxnk          1/1     Running   0          3h43m
