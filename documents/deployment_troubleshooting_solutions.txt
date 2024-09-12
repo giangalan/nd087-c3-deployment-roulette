@@ -1,0 +1,4 @@
+1. I found the problems from checking the app hello-world logs and find out the healthcheck problems
+2. After looking at the yaml file, the root cause is healthcheck misconfiguration in livenessProbe path
+3. The solution is changing the path value from /nginx_status to /healthz and applying the yaml file.
+4. After above troubleshooting steps, we got the results
